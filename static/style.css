@@ -1,0 +1,126 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+/* Pulse Glows */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.8);
+  }
+}
+
+.glow-studying {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes battle-fire {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(249, 115, 22, 0.7);
+  }
+}
+
+.glow-battle {
+  animation: battle-fire 1.8s infinite ease-in-out;
+}
+
+/* Custom Map Marker Styling */
+.custom-cafe-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -100%);
+}
+
+.marker-pin {
+  width: 44px;
+  height: 44px;
+  border-radius: 50% 50% 50% 0;
+  background: #3b82f6;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -22px 0 0 -22px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marker-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-stack {
+  display: flex;
+  align-items: center;
+  margin-top: -8px;
+}
+
+.avatar-stack img {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 2px solid #0f172a;
+  margin-left: -8px;
+}
+.avatar-stack img:first-child {
+  margin-left: 0;
+}
+
+/* Active tab style */
+.tab-btn.active {
+  color: #38bdf8;
+  font-weight: 700;
+}
+.tab-btn.active .tab-icon {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 2px 8px rgba(56, 189, 248, 0.6));
+}
+
+/* Modal animation */
+.modal-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
